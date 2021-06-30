@@ -70,8 +70,8 @@ function selectQuestion(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        // startButton.innerText = 'Restart'
+        // startButton.classList.remove('hide')
         gameovernofi.classList.remove('hide')
         alert('Chung mung ban da dat duoc' + "  " + countCorrect + " diem")
         showGameover()
