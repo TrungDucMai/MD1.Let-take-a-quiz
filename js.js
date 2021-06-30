@@ -23,7 +23,10 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - 0.5)
     currentQuestionIndex = 0
     setNextQuestion()
+}
 
+function resetGame(){
+    location.reload()
 }
 
 function setNextQuestion() {
@@ -56,7 +59,7 @@ function resetState() {
 function selectQuestion(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    if(correct){
+    if (correct) {
         countCorrect++;
     }
     score.innerText = countCorrect;
@@ -70,7 +73,7 @@ function selectQuestion(e) {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
         gameovernofi.classList.remove('hide')
-        alert('Chung mung ban da dat duoc'+ "  "+countCorrect+" diem")
+        alert('Chung mung ban da dat duoc' + "  " + countCorrect + " diem")
         showGameover()
 
         // location.reload();
@@ -86,7 +89,7 @@ function setStatusClass(element, correct) {
 
         element.classList.add('correct');
         // countCorrect++;
-        console.log ( countCorrect)
+        console.log(countCorrect)
     } else {
         element.classList.add('wrong')
     }
@@ -96,11 +99,13 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
-function showGameover (){
+
+function showGameover() {
     gameovernofi.classList.remove('hide')
     container.classList.add('hide')
-   tryAgain.addEventListener("click", function() {
-location.reload()});
+    tryAgain.addEventListener("click", function () {
+        location.reload()
+    });
 }
 
 const questions = [
@@ -155,7 +160,7 @@ const questions = [
             {text: 'Kết thúc thế chiến II', correct: false},
             {text: 'Liên Xô sụp đổ', correct: false},
             {text: 'Apollo 11 hạ cánh trên mặt trăng', correct: true},
-            {text:'Đại suy thoái', correct: false}
+            {text: 'Đại suy thoái', correct: false}
         ]
     },
     {

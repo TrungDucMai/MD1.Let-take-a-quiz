@@ -67,7 +67,7 @@ body {
     border-radius: 10px;
     position: absolute;
     top:0;
-    left: 50%;
+    left: 45%;
     display: flex;
     margin: auto;
     padding: 25px 25px ;
@@ -75,7 +75,7 @@ body {
 }
 .end-game{
     width: 200px;
-    height: 200px;
+    height: 60px;
     background-color: orange;
     padding: 10px 20px;
     justify-content: center;
